@@ -5,7 +5,7 @@ Home: https://github.com/ethereum/eth-typing
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: eth-typing: Common type annotations for ethereum python packages
 
