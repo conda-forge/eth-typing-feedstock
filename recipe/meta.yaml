@@ -1,5 +1,5 @@
 {% set name = "eth-typing" %}
-{% set version = "4.3.1" %}
+{% set version = "4.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 4504559c87a9f71f4b99aa5a1e0549adaa7f192cbf8e37a295acfcddb1b5412d
+  sha256: 93848083ac6bb4c20cc209ea9153a08b0a528be23337c889f89e1e5ffbe9807d
 
 build:
   number: 0
