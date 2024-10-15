@@ -1,5 +1,5 @@
 {% set name = "eth-typing" %}
-{% set version = "5.0.0" %}
+{% set version = "5.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 87ce7cee75665c09d2dcff8de1b496609d5e32fcd2e2b1d8fc0370c29eedcdc0
+  sha256: 83debf88c9df286db43bb7374974681ebcc9f048fac81be2548dbc549a3203c0
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - pip
     - python >=3.8,<4.0
     - typing-extensions >=4.5.0
+    - setuptools
   run:
     - python >=3.8,<4.0
     - typing-extensions >=4.5.0
