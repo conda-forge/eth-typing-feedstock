@@ -1,6 +1,5 @@
 {% set name = "eth-typing" %}
-{% set version = "3.2.0" %}
-
+{% set version = "5.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,19 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 177e2070da9bf557fe0fd46ee467a7be2d0b6476aa4dc18680603e7da1fc5690
+  sha256: 83debf88c9df286db43bb7374974681ebcc9f048fac81be2548dbc549a3203c0
 
 build:
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    - python
     - pip
-    - python >=3.5,<4.0
+    - wheel
   run:
-    - python >=3.5,<4.0
+    - python
+    - typing-extensions >=4.5.0
 
 test:
   imports:
@@ -34,8 +34,12 @@ about:
   home: https://github.com/ethereum/eth-typing
   summary: 'eth-typing: Common type annotations for ethereum python packages'
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  doc_url: https://github.com/ethereum/eth-typing/blob/main/README.md
+  dev_url: https://github.com/ethereum/eth-typing
+  description: Common type annotations for ethereum python packages
 
 extra:
   recipe-maintainers:
-    - step21
+    - snegireff
